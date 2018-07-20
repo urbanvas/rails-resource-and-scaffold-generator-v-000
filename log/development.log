@@ -392,3 +392,39 @@ Processing by ArticlesController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
   Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 98.14.214.177 at 2018-07-20 21:31:17 +0000
+Cannot render console from 98.14.214.177! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 98.14.214.177 at 2018-07-20 21:31:21 +0000
+Cannot render console from 98.14.214.177! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (1.7ms)
+  Rendered articles/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 98.14.214.177 at 2018-07-20 21:31:29 +0000
+Cannot render console from 98.14.214.177! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnnfB9WvZd2tnZovwM1vlrX48nqHYd1oImm6JACMKr0qcRFjEBqnupNmUXI9LVV6nfWYgJKGK+9iIfR1pN06mA==", "article"=>{"title"=>"2", "body"=>"is cool"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "2"], ["body", "is cool"], ["created_at", "2018-07-20 21:31:29.917177"], ["updated_at", "2018-07-20 21:31:29.917177"]]
+  [1m[35m (50.0ms)[0m  commit transaction
+Redirected to http://67.205.188.72:34564/articles/2
+Completed 302 Found in 56ms (ActiveRecord: 50.3ms)
+
+
+Started GET "/articles/2" for 98.14.214.177 at 2018-07-20 21:31:30 +0000
+Cannot render console from 98.14.214.177! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
